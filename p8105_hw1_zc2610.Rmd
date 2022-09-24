@@ -27,7 +27,8 @@ library(ggplot2)
 ```
 
 ```{r make a scatterplot}
-ggplot(penguins,aes(x = bill_length_mm,y = flipper_length_mm,color = species)) + geom_point(shape = 20)
+scatterplot = ggplot(penguins,aes(x = bill_length_mm,y = flipper_length_mm,color = species)) + geom_point(shape = 20)
+ggsave("scatterplot_hw1.png", scatterplot)
 ```
 
 
