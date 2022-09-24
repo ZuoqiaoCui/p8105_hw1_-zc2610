@@ -13,8 +13,8 @@ data("penguins", package = "palmerpenguins")
 ```
 
 ```{r mean of flipper length}
-penguins = na.omit(penguins)
-mean(pull(penguins, flipper_length_mm))
+penguins_flip_length = na.omit(penguins$flipper_length_mm)
+mean(penguins_flip_length)
 ```
 Description:
 
@@ -28,6 +28,7 @@ library(ggplot2)
 
 ```{r make a scatterplot}
 scatterplot = ggplot(penguins,aes(x = bill_length_mm,y = flipper_length_mm,color = species)) + geom_point(shape = 20)
+scatterplot
 ggsave("scatterplot_hw1.png", scatterplot)
 ```
 
