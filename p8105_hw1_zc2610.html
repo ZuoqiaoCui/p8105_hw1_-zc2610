@@ -411,9 +411,9 @@ scatterplot</code></pre>
   factor_vector = factor(c(&quot;first&quot;,&quot;first&quot;,&quot;first&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;third&quot;,&quot;third&quot;))
   )</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, norm))</code></pre>
-<pre><code>## [1] -0.27207</code></pre>
+<pre><code>## [1] -0.03187801</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, logical_vector))</code></pre>
-<pre><code>## [1] 0.3</code></pre>
+<pre><code>## [1] 0.6</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, character_vector))</code></pre>
 <pre><code>## Warning in mean.default(pull(problem2_df, character_vector)): argument is not
 ## numeric or logical: returning NA</code></pre>
@@ -431,7 +431,7 @@ logical</p>
 character_vector2 = as.numeric(pull(problem2_df, character_vector))
 factor_vector2 = as.numeric(pull(problem2_df, factor_vector))</code></pre>
 <pre class="r"><code>mean(logical_vector2)</code></pre>
-<pre><code>## [1] 0.3</code></pre>
+<pre><code>## [1] 0.6</code></pre>
 <pre class="r"><code>mean(character_vector2)</code></pre>
 <pre><code>## [1] 5.5</code></pre>
 <pre class="r"><code>mean(factor_vector2)</code></pre>
