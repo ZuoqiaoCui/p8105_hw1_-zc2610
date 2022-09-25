@@ -377,8 +377,9 @@ pre code {
 ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<div id="problem-1" class="section level1">
-<h1>Problem 1</h1>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<div id="problem-1" class="section level2">
+<h2>Problem 1</h2>
 <pre class="r"><code>data(&quot;penguins&quot;, package = &quot;palmerpenguins&quot;)</code></pre>
 <pre class="r"><code>penguins_flip_length = na.omit(penguins$flipper_length_mm)
 mean(penguins_flip_length)</code></pre>
@@ -392,7 +393,6 @@ and body_mass_g are numeric variables.</li>
 <li>This dataset has 344 rows and 8 columns of data</li>
 <li>The mean flipper length of this dataset is 200.9152</li>
 </ol>
-<pre class="r"><code>library(ggplot2)</code></pre>
 <pre class="r"><code>scatterplot = ggplot(penguins,aes(x = bill_length_mm,y = flipper_length_mm,color = species)) + geom_point(shape = 20)
 scatterplot</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
@@ -401,8 +401,8 @@ scatterplot</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 </div>
-<div id="problem-2" class="section level1">
-<h1>Problem 2</h1>
+<div id="problem-2" class="section level2">
+<h2>Problem 2</h2>
 <pre class="r"><code>  problem2_df = 
   tibble(
   norm = rnorm(n = 10),
@@ -411,9 +411,9 @@ scatterplot</code></pre>
   factor_vector = factor(c(&quot;first&quot;,&quot;first&quot;,&quot;first&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;second&quot;,&quot;third&quot;,&quot;third&quot;))
   )</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, norm))</code></pre>
-<pre><code>## [1] 0.8957441</code></pre>
+<pre><code>## [1] -0.006481842</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, logical_vector))</code></pre>
-<pre><code>## [1] 0.8</code></pre>
+<pre><code>## [1] 0.5</code></pre>
 <pre class="r"><code>mean(pull(problem2_df, character_vector))</code></pre>
 <pre><code>## Warning in mean.default(pull(problem2_df, character_vector)): argument is not
 ## numeric or logical: returning NA</code></pre>
@@ -431,7 +431,7 @@ logical</p>
 character_vector2 = as.numeric(pull(problem2_df, character_vector))
 factor_vector2 = as.numeric(pull(problem2_df, factor_vector))</code></pre>
 <pre class="r"><code>mean(logical_vector2)</code></pre>
-<pre><code>## [1] 0.8</code></pre>
+<pre><code>## [1] 0.5</code></pre>
 <pre class="r"><code>mean(character_vector2)</code></pre>
 <pre><code>## [1] 5.5</code></pre>
 <pre class="r"><code>mean(factor_vector2)</code></pre>
